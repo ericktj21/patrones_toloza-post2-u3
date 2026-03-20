@@ -126,4 +126,4 @@ Mínimo 3 commits descriptivos
 
 ## Salida de Consola
 
-![Salida de ejecución de tests](src\image.png)
+<img src="image.png" alt="Salida de ejecución de tests" width="600"/>
