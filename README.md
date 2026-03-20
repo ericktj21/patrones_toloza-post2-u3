@@ -52,10 +52,10 @@ Se implementa una cadena de decoradores para agregar capas opcionales de procesa
 ```
 
 ### Justificación de Uso
-- ✅ **Composición sobre herencia:** Sin decoradores, necesitaríamos subclases como `OrdenConLog`, `OrdenConValidacion`, etc. (explosión combinatoria)
-- ✅ **Responsabilidad única:** Cada decorador tiene una responsabilidad específica
-- ✅ **Open/Closed:** Se pueden agregar nuevas capas sin modificar código existente
-- ✅ **Flexibilidad:** El orden y combinación de decoradores es configurable en `@Configuration`
+- **Composición sobre herencia:** Sin decoradores, necesitaríamos subclases como `OrdenConLog`, `OrdenConValidacion`, etc. (explosión combinatoria)
+- **Responsabilidad única:** Cada decorador tiene una responsabilidad específica
+- **Open/Closed:** Se pueden agregar nuevas capas sin modificar código existente
+- **Flexibilidad:** El orden y combinación de decoradores es configurable en `@Configuration`
 
 
 ---
@@ -70,10 +70,10 @@ Se implementa una fachada que unifica tres servicios especializados (Email, SMS,
 ```
 
 ### Justificación de Uso
-- ✅ **Interfaz simplificada:** Una sola llamada notifica por tres canales
-- ✅ **Oculta complejidad:** El cliente no conoce los servicios internos
-- ✅ **Desacoplamiento:** Cambios internos no afectan al cliente
-- ✅ **Fácil extensión:** Agregar nuevos canales sin modificar código existente
+- **Interfaz simplificada:** Una sola llamada notifica por tres canales
+- **Oculta complejidad:** El cliente no conoce los servicios internos
+- **Desacoplamiento:** Cambios internos no afectan al cliente
+- **Fácil extensión:** Agregar nuevos canales sin modificar código existente
 
 ---
 
@@ -106,12 +106,12 @@ mvn clean package
 
 ## Checkpoints Verificados
 
-✅ Cadena de decoradores en `DecoratorConfig`  
-✅ Orden de ejecución: AUDITORIA → VALIDACION → LOG → BASE  
-✅ Excepciones de validación propagadas correctamente  
-✅ `NotificacionFacade` notifica por tres canales  
-✅ 4 tests JUnit 5 pasando  
-✅ Mínimo 3 commits descriptivos
+Cadena de decoradores en `DecoratorConfig`  
+Orden de ejecución: AUDITORIA → VALIDACION → LOG → BASE  
+Excepciones de validación propagadas correctamente  
+`NotificacionFacade` notifica por tres canales  
+4 tests JUnit 5 pasando  
+Mínimo 3 commits descriptivos
 
 ---
 
@@ -126,4 +126,4 @@ mvn clean package
 
 ## Salida de Consola
 
-![Salida de ejecución de tests](image.png)
+![Salida de ejecución de tests](src\image.png)
